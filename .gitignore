@@ -2,3 +2,4 @@ Acme-CPANModules-BloomFilters-*
 .build
 *~
 nytprof*
+.DS_Store
