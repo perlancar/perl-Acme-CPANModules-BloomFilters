@@ -1,5 +1,7 @@
 package Acme::CPANModules::BloomFilters;
 
+use strict;
+
 # AUTHORITY
 # DATE
 # DIST
@@ -18,7 +20,12 @@ can configure the rate of false positives. The larger the filter, the smaller
 the rate. Some examples for application of bloom filter include: 1) checking
 whether a password is in a dictionary of millions of common/compromised
 passwords; 2) checking an email address against leak database; 3) virus pattern
-checking; 4) IP/domain blacklisting/whitelisting.
+checking; 4) IP/domain blacklisting/whitelisting. Due to its properties, it is
+sometimes combined with other data structures. For example, a small bloom filter
+can be distributed with a software to check against a database. When the answer
+from bloom filter is "possibly in set", the software can further consult on
+online database to make sure if it is indeed in set. Thus, bloom filter can be
+used to reduce the number of direct queries to database.
 
 In Perl, my default go-to choice is <pm:Algorithm::BloomFilter>, unless there's
 a specific feature I need from other implementations.
