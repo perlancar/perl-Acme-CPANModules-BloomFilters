@@ -8,7 +8,7 @@ use strict;
 # VERSION
 
 our $LIST = {
-    summary => "Bloom filter modules on CPAN",
+    summary => "List of bloom filter modules on CPAN",
     description => <<'_',
 
 Bloom filter is a data structure that allows you to quickly check whether an
